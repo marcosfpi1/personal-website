@@ -26,7 +26,7 @@ module.exports = {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "ts-loader",
+                    loader: "babel-loader",
                 }
             },
             {
@@ -69,7 +69,7 @@ module.exports = {
         extensions: [".ts", ".tsx", ".js", ".jsx"],
     },
 
-    devtool: "source-map",
+    devtool: "inline-source-map",
     devServer: {
         static: "./public",
         hot: true,
