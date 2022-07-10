@@ -4,4 +4,11 @@ const greetings = {
     hey: 3
 }
 
+const words = {
+    ...greetings,
+    food: 4,
+    work: 5
+}
+
 console.log(greetings);
+console.log(words);
