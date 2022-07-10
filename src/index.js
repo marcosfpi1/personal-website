@@ -1,16 +1,8 @@
-import  "./styles/index.scss";
+import { createRoot } from 'react-dom/client';
+import App from "./components/App";
 
-const greetings = {
-    hello: 1,
-    bye: 2,
-    hey: 3
-};
-
-const words = {
-    ...greetings,
-    food: 4,
-    work: 5
-};
-
-console.log(greetings);
-console.log(words);
+const container = document.getElementById("root");
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(
+    <App />
+);
