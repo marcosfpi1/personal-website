@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 const greetings = {
@@ -16,7 +17,7 @@ console.log(greetings);
 console.log(words);
 
 const Recipes = () => {
-    const [recipe, setRecipe] = useState({});
+    const [recipe, setRecipe] = useState<Record<string, number>>({});
     return (
         <div>
             <h3>

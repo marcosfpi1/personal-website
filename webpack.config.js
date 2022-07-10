@@ -23,6 +23,13 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.tsx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "ts-loader",
+                }
+            },
+            {
                 test: /\.(png|jpe?g|gif|svg)$/i,
                 type: "asset/resource",
             },
@@ -59,12 +66,12 @@ module.exports = {
     ],
 
     resolve: {
-        extensions: [".js", ".jsx"],
+        extensions: [".ts", ".tsx", ".js", ".jsx"],
     },
 
     devtool: "source-map",
     devServer: {
-        static: "./dist",
+        static: "./public",
         hot: true,
     },
 }
